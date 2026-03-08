@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>封面新闻招商套餐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            padding: 40px 20px;
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 100px; /* 为底部logo预留空间 */
+        }
+
+        .pricing-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .pricing-card {
+            background-color: #1e1e1e;
+            border-radius: 16px;
+            padding: 28px 24px;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #2a2a2a;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            border-color: #3a3a3a;
+        }
+
+        .card-header {
+            margin-bottom: 24px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-subtitle {
+            font-size: 14px;
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .price-period {
+            font-size: 16px;
+            color: #a0a0a0;
+            font-weight: 400;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #2a2a2a;
+            margin: 20px 0;
+        }
+
+        .features-list {
+            list-style: none;
+            flex-grow: 1;
+            margin-bottom: 28px;
+        }
+
+        .features-list li {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: #d0d0d0;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        .subscribe-btn {
+            background-color: #3b82f6;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #2563eb;
+        }
+
+        .most-popular {
+            border: 2px solid #3b82f6;
+            position: relative;
+        }
+
+        .most-popular::after {
+            content: "最受欢迎";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background-color: #3b82f6;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+
+        /* 底部logo样式 */
+        .footer-logo {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            width: 132px; /* 与logo原图尺寸一致 */
+            height: 80px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+        <!-- 5万套餐 -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <h3 class="card-title">STARTER</h3>
+                <p class="card-subtitle">适合初次合作与品牌曝光</p>
+                <div class="price">¥5<span class="price-period">万</span></div>
+            </div>
+            <div class="divider"></div>
+            <ul class="features-list">
+                <li>封面新闻专题报道 1 条</li>
+                <li>封面新闻视频号视频直发 1 条</li>
+                <li>参与论坛交流分享</li>
+            </ul>
+            <button class="subscribe-btn">立即咨询</button>
+        </div>
+
+        <!-- 20万套餐 -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <h3 class="card-title">GROWTH</h3>
+                <p class="card-subtitle">适合深度合作与流量增长</p>
+                <div class="price">¥20<span class="price-period">万</span></div>
+            </div>
+            <div class="divider"></div>
+            <ul class="features-list">
+                <li>封面新闻专题报道 2 条</li>
+                <li>封面新闻视频号视频直发 2 条</li>
+                <li>参与论坛交流分享</li>
+                <li>封面大号混场直播半小时</li>
+                <li>封面好物严选（300万粉丝）专场 1 场</li>
+            </ul>
+            <button class="subscribe-btn">立即咨询</button>
+        </div>
+
+        <!-- 50万套餐 - 最受欢迎 -->
+        <div class="pricing-card most-popular">
+            <div class="card-header">
+                <h3 class="card-title">PREMIUM</h3>
+                <p class="card-subtitle">适合品牌升级与全域传播</p>
+                <div class="price">¥50<span class="price-period">万</span></div>
+            </div>
+            <div class="divider"></div>
+            <ul class="features-list">
+                <li>封面新闻专题报道 6 条</li>
+                <li>封面新闻视频号视频直发 6 条</li>
+                <li>参与论坛交流分享</li>
+                <li>封面大号发 6 条视频推广+总裁进大号直播间专访</li>
+                <li>封面好物严选（300万粉丝）专场 6 场</li>
+                <li>中部达人进直播间及视频推广 1 场</li>
+                <li>矩阵号日播 80 场</li>
+            </ul>
+            <button class="subscribe-btn">立即咨询</button>
+        </div>
+
+        <!-- 100万套餐 -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <h3 class="card-title">ULTIMATE</h3>
+                <p class="card-subtitle">适合战略级合作与品牌破圈</p>
+                <div class="price">¥100<span class="price-period">万</span></div>
+            </div>
+            <div class="divider"></div>
+            <ul class="features-list">
+                <li>封面新闻专题报道 12 条</li>
+                <li>封面新闻视频号视频直发 12 条</li>
+                <li>参与论坛交流分享</li>
+                <li>封面大号发 12 条视频推广+总裁进大号直播间专访</li>
+                <li>封面好物严选（300万粉丝）专场 12 场</li>
+                <li>头部达人进直播间及视频推广 1 场</li>
+                <li>矩阵号日播 200 场</li>
+            </ul>
+            <button class="subscribe-btn">立即咨询</button>
+        </div>
+    </div>
+
+    <!-- 底部logo -->
+    <div class="footer-logo">
+        <!-- 请将下面的图片URL替换为你的logo实际地址 -->
+        <img src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/67d6da2c1b4c42b9b01e2baabc4a1f36.png~tplv-a9rns2rl98-image.png?lk3s=8e244e95&rcl=20260307232952F4279B36EFCCCD0BA9DE&rrcfp=dafada99&x-expires=2089121392&x-signature=bs3gnR3IDRIOs4y%2BO1S7r1L80Ek%3D" alt="品牌logo">
+    </div>
+</body>
+</html>
